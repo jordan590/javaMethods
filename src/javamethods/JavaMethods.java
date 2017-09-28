@@ -28,31 +28,43 @@ public class JavaMethods {
      */
     public static void startUp() {
         int select = 0;
+        String check1, check2, check3;
+        String yes = "yes";
         Scanner input = new Scanner(System.in);
         System.out.println("Please select from the following: ");
         System.out.println("1. Build a roof");
         System.out.println("2. Build a base");
         System.out.println("3. Build a walk");
-        System.out.println("4. Exit program");
+        if (check1.equals(yes) && check2.equals(yes) && check3.equals(yes)){
+            System.out.println("4. Create the house!");
+        }
+        System.out.println("0. Exit program");
         select = input.nextInt();
         switch (select) {
             case 1:
                 select = 1;
-                addRoof(5);
+                addRoof();
+                check1 = "yes";
                 break;
             case 2:
                 select = 2;
                 addBase();
+                check2 = "yes";
                 break;
             case 3:
                 select = 3;
                 addWalk();
+                check3 = "yes";
                 break;
             case 4:
                 select = 4;
+                
+            case 5:
+                select = 0;
                 System.exit(0);
 
         }
+        
     }
 
     /**
@@ -60,8 +72,8 @@ public class JavaMethods {
      *
      *
      */
-    public static void addRoof(int style) {
-        System.out.println("1");
+    public static void addRoof() {
+        System.out.println("Roof built! Memory stored for final build.");
         startUp();
     }
 
@@ -71,7 +83,7 @@ public class JavaMethods {
      *
      */
     public static void addBase() {
-        System.out.println("2");
+        System.out.println("Base built! Memory stored for final build.");
         startUp();
     }
 
@@ -81,8 +93,18 @@ public class JavaMethods {
      *
      */
     public static void addWalk() {
-        System.out.println("3");
+        System.out.println("Walk built! Memort stored for final build");
         startUp();
     }
-
+    
+    /**
+     * 
+     * 
+     * 
+     */
+    public static void finalBuild(){
+        System.out.println("");
+        System.out.println("");
+        System.out.println("");
+    }
 }
